@@ -2,7 +2,7 @@ import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 
 
-const asset = require('../assets/images/server1.png');
+const asset = require('../assets/images/server-icon.png');
 const friendIcon = require('../assets/images/friendicon.png');
 const pfp1 = require('../assets/images/lasergreen.png');
 const pfp2 = require('../assets/images/henry2.png');
@@ -10,49 +10,58 @@ const pfp3 = require('../assets/images/joe swag.png');
 const home = require('../assets/images/homeicon.png');
 const bell = require('../assets/images/bellicon.png');
 const you = require('../assets/images/mypfp.png');
-const server1 = require('../assets/images/server1.png')
+const server1 = require('../assets/images/server1.png');
+const server2 = require('../assets/images/server2.png');
+const server3 = require('../assets/images/server3.png');
+const server4 = require('../assets/images/server4.png');
+const server5 = require('../assets/images/server5.png');
+const server6 = require('../assets/images/server6.png');
+const server7 = require('../assets/images/server7.png');
+const server8 = require('../assets/images/server8.png');
+const server9 = require('../assets/images/server9.png');
+const server10 = require('../assets/images/server10.png');
 const mainPage = () => (
     <View style={styles.background}>
         <View style={styles.sideBar}>
-            <Image
-            style={styles.serverIcon}
-            source={asset}>
-            </Image>
-            <Image
-            style={styles.serverIcon}
-            source={asset}>
-            </Image>
             <Image
             style={styles.serverIcon}
             source={server1}>
             </Image>
             <Image
             style={styles.serverIcon}
-            source={asset}>
+            source={server2}>
             </Image>
             <Image
             style={styles.serverIcon}
-            source={asset}>
+            source={server3}>
             </Image>
             <Image
             style={styles.serverIcon}
-            source={asset}>
+            source={server4}>
             </Image>
             <Image
             style={styles.serverIcon}
-            source={asset}>
+            source={server5}>
             </Image>
             <Image
             style={styles.serverIcon}
-            source={asset}>
+            source={server6}>
             </Image>
             <Image
             style={styles.serverIcon}
-            source={asset}>
+            source={server7}>
             </Image>
             <Image
             style={styles.serverIcon}
-            source={asset}>
+            source={server8}>
+            </Image>
+            <Image
+            style={styles.serverIcon}
+            source={server9}>
+            </Image>
+            <Image
+            style={styles.serverIcon}
+            source={server10}>
             </Image>
             <Image
             style={styles.serverIcon}
