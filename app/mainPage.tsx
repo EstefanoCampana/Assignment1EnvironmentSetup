@@ -1,7 +1,16 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 
-const asset = require('../assets/images/server-icon.png');
+
+const asset = require('../assets/images/server1.png');
+const friendIcon = require('../assets/images/friendicon.png');
+const pfp1 = require('../assets/images/lasergreen.png');
+const pfp2 = require('../assets/images/henry2.png');
+const pfp3 = require('../assets/images/joe swag.png');
+const home = require('../assets/images/homeicon.png');
+const bell = require('../assets/images/bellicon.png');
+const you = require('../assets/images/mypfp.png');
+const server1 = require('../assets/images/server1.png')
 const mainPage = () => (
     <View style={styles.background}>
         <View style={styles.sideBar}>
@@ -15,7 +24,7 @@ const mainPage = () => (
             </Image>
             <Image
             style={styles.serverIcon}
-            source={asset}>
+            source={server1}>
             </Image>
             <Image
             style={styles.serverIcon}
@@ -69,30 +78,30 @@ const mainPage = () => (
                     <Image style={{resizeMode: "cover",borderRadius: 50,height: 35,width: 35, marginHorizontal: 5}} source={asset}></Image>
                     <Image style={{resizeMode: "cover",borderRadius: 50,height: 35,width: 35, marginHorizontal: 5}} source={asset}></Image>
                     <View style={{flex:0, backgroundColor:"#40444b", borderRadius: 30, justifyContent:"center", alignItems:"center", flexGrow:1, flexDirection: "row"}}>
-                        <Image style={{resizeMode: "cover",borderRadius: 50,height: 35,width: 35}} source={asset}></Image>
+                        <Image style={{resizeMode: "cover",borderRadius: 10,height: 40,width: 35}} source={friendIcon}></Image>
                         <Text style={{marginLeft:5, fontSize: 15, fontWeight: "bold",color: "#ffffff"}}>Add Friends</Text>
                     </View>
                 </View>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{flex:0}}>
                     <View style={{flex:0, backgroundColor:"rgba(48, 52, 58, 1)0", flexDirection:"row", borderRadius:15, marginBottom:20, padding: 10, marginRight:10 }}>
-                        <Image style={{resizeMode: "cover",borderRadius: 20,height: 90,width:90 }}source={asset}></Image>
+                        <Image style={{resizeMode: "cover",borderRadius: 50,height: 90,width:90 }}source={pfp1}></Image>
                         <View style={{flex:0, flexDirection:"column", marginLeft: 10}}>
-                            <Image style={{resizeMode: "cover",borderRadius: 50,height: 35,width: 35,}} source={asset}></Image>
+                            <Image style={{resizeMode: "cover",borderRadius: 50,height: 35,width: 35,}} source={pfp1}></Image>
                             <Text style={styles.primaryTextHighlight}>LaserGreen</Text>
                             <Text style={styles.secondaryText}>osu!</Text>
                         </View>
                     </View>
                     <View style={{flex:0, backgroundColor:"rgba(48, 52, 58, 1)0", flexDirection:"row", borderRadius:15, marginBottom:20, padding: 10 }}>
-                        <Image style={{resizeMode: "cover",borderRadius: 20,height: 90,width:90 }}source={asset}></Image>
+                        <Image style={{resizeMode: "cover",borderRadius: 50,height: 90,width:90 }}source={pfp2}></Image>
                         <View style={{flex:0, flexDirection:"column", marginLeft: 8}}>
-                            <Image style={{resizeMode: "cover",borderRadius: 50,height: 35,width: 35,}} source={asset}></Image>
+                            <Image style={{resizeMode: "cover",borderRadius: 50,height: 35,width: 35,}} source={pfp2}></Image>
                             <Text style={styles.primaryTextHighlight}>Henry2</Text>
                             <Text style={styles.secondaryText}>Gamma: Stalker</Text>
                         </View>
                     </View>
                 </ScrollView>
                 <View style={styles.directMessageHighlight}>
-                    <Image style={styles.profileIcon} source={asset}></Image>
+                    <Image style={styles.profileIcon} source={pfp1}></Image>
                     <View style={styles.profileInfo}>
                         <Text style={styles.primaryText}>LaserGreen</Text>
                         <Text style={styles.secondaryText}>You: Toby Fox</Text>
@@ -100,7 +109,7 @@ const mainPage = () => (
                     <Text style={styles.timeText}>21m</Text>
                 </View>
                 <View style={styles.directMessage}>
-                        <Image style={styles.profileIcon} source={asset}></Image>
+                        <Image style={styles.profileIcon} source={pfp3}></Image>
                     <View style={styles.profileInfo}>
                         <Text style={styles.primaryText}>XxJoeSwag727xX</Text>
                         <Text style={styles.secondaryText}>XxJoeSwag727xX: lethal time?</Text>
@@ -108,7 +117,7 @@ const mainPage = () => (
                     <Text style={styles.timeText}>1d</Text>
                 </View>
                 <View style={styles.directMessage}>
-                        <Image style={styles.profileIcon} source={asset}></Image>
+                        <Image style={styles.profileIcon} source={pfp2}></Image>
                     <View style={styles.profileInfo}>
                         <Text style={styles.primaryText}>Japanese Uni</Text>
                         <Text style={styles.secondaryText}>LaserGreen: 今は大学です</Text>
@@ -119,15 +128,15 @@ const mainPage = () => (
         </ScrollView>
     <View style={styles.navigationBar}>
         <View style={{flex:0, flexDirection: "column", justifyContent: "center"}}>
-            <Image style={styles.profileIcon} source={asset}></Image>
+            <Image style={styles.profileIcon} source={home}></Image>
             <Text style={styles.navTextHighlight}>Home</Text>
         </View>
         <View style={{flex:0, flexDirection: "column"}}>
-            <Image style={{marginLeft: "auto", marginRight:"auto",resizeMode: "cover",borderRadius: 50,height: 45,width: 45, marginBottom: 3}} source={asset}></Image>
+            <Image style={{marginLeft: "auto", marginRight:"auto",resizeMode: "cover",borderRadius: 50,height: 45,width: 45, marginBottom: 3}} source={bell}></Image>
             <Text style={styles.navText}>Notifications</Text>
         </View>
         <View style={{flex:0, flexDirection: "column", justifyContent: "center"}}>
-            <Image style={styles.profileIcon} source={asset}></Image>
+            <Image style={styles.profileIcon} source={you}></Image>
             <Text style={styles.navText}>You</Text>
         </View>
       </View>
