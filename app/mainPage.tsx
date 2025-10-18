@@ -1,6 +1,5 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
-
-
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const asset = require('../assets/images/server-icon.png');
 const friendIcon = require('../assets/images/friendicon.png');
@@ -20,90 +19,65 @@ const server7 = require('../assets/images/server7.png');
 const server8 = require('../assets/images/server8.png');
 const server9 = require('../assets/images/server9.png');
 const server10 = require('../assets/images/server10.png');
+const gameIcon = require('../assets/images/game-icon.png');
+const gameIcon2 = require('../assets/images/game-icon2.jpg');
+const groupIcon = require('../assets/images/group-icon.png');
 const mainPage = () => (
-    <View style={styles.background}>
+    <SafeAreaView style={styles.background}>
         <View style={styles.sideBar}>
-            <Image
-            style={styles.serverIcon}
-            source={server1}>
+            <Image style={styles.directMessageIcon} source={server1}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={server2}>
+            <Image style={styles.serverIcon} source={server2}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={server3}>
+            <Image style={styles.serverIcon} source={server3}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={server4}>
+            <Image style={styles.serverIcon} source={server4}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={server5}>
+            <Image style={styles.serverIcon} source={server5}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={server6}>
+            <Image style={styles.serverIcon} source={server6}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={server7}>
+            <Image style={styles.serverIcon} source={server7}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={server8}>
+            <Image style={styles.serverIcon} source={server8}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={server9}>
+            <Image style={styles.serverIcon} source={server9}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={server10}>
+            <Image style={styles.serverIcon} source={server10}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={asset}>
+            <Image style={styles.serverIcon} source={asset}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={asset}>
+            <Image style={styles.serverIcon} source={asset}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={asset}>
+            <Image style={styles.serverIcon} source={asset}>
             </Image>
-            <Image
-            style={styles.serverIcon}
-            source={asset}>
+            <Image style={styles.serverIcon} source={asset}>
             </Image>
         </View>
-        <ScrollView stickyHeaderIndices={[1]}>
-            <View style={styles.mainArea}>
-                    <Text style={styles.header}>Messages</Text>
-                <View style={{flex: 0,flexDirection:"row", marginBottom:20 }}>
-                    <Image style={{resizeMode: "cover",borderRadius: 50,height: 35,width: 35, marginHorizontal: 5}} source={asset}></Image>
-                    <Image style={{resizeMode: "cover",borderRadius: 50,height: 35,width: 35, marginHorizontal: 5}} source={asset}></Image>
-                    <View style={{flex:0, backgroundColor:"#40444b", borderRadius: 30, justifyContent:"center", alignItems:"center", flexGrow:1, flexDirection: "row"}}>
-                        <Image style={{resizeMode: "cover",borderRadius: 10,height: 40,width: 35}} source={friendIcon}></Image>
-                        <Text style={{marginLeft:5, fontSize: 15, fontWeight: "bold",color: "#ffffff"}}>Add Friends</Text>
+        <View style={styles.mainArea}>
+            <Text style={styles.header}>Messages</Text>
+                <View style={styles.mainBar}>
+                    <Image style={styles.mainBarIcon} source={asset}></Image>
+                    <Image style={styles.mainBarIcon} source={asset}></Image>
+                    <View style={styles.addFriendsButton}>
+                        <Image style={styles.addFriendsIcon} source={friendIcon}></Image>
+                        <Text style={styles.addFriendsText}>Add Friends</Text>
                     </View>
                 </View>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{flex:0}}>
-                    <View style={{flex:0, backgroundColor:"rgba(48, 52, 58, 1)0", flexDirection:"row", borderRadius:15, marginBottom:20, padding: 10, marginRight:10 }}>
-                        <Image style={{resizeMode: "cover",borderRadius: 50,height: 90,width:90 }}source={pfp1}></Image>
-                        <View style={{flex:0, flexDirection:"column", marginLeft: 10}}>
-                            <Image style={{resizeMode: "cover",borderRadius: 50,height: 35,width: 35,}} source={pfp1}></Image>
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{flex:0, marginBottom:10}}>
+                    <View style={styles.activityStatusContainer}>
+                        <Image style={styles.activityStatusImage}source={gameIcon}></Image>
+                        <View style={styles.activityStatusProfile}>
+                            <Image style={styles.profileIconSmall} source={pfp1}></Image>
                             <Text style={styles.primaryTextHighlight}>LaserGreen</Text>
                             <Text style={styles.secondaryText}>osu!</Text>
                         </View>
                     </View>
-                    <View style={{flex:0, backgroundColor:"rgba(48, 52, 58, 1)0", flexDirection:"row", borderRadius:15, marginBottom:20, padding: 10 }}>
-                        <Image style={{resizeMode: "cover",borderRadius: 50,height: 90,width:90 }}source={pfp2}></Image>
-                        <View style={{flex:0, flexDirection:"column", marginLeft: 8}}>
-                            <Image style={{resizeMode: "cover",borderRadius: 50,height: 35,width: 35,}} source={pfp2}></Image>
+                    <View style={styles.activityStatusContainer}>
+                        <Image style={styles.activityStatusImage}source={gameIcon2}></Image>
+                        <View style={styles.activityStatusProfile}>
+                            <Image style={styles.profileIconSmall} source={pfp2}></Image>
                             <Text style={styles.primaryTextHighlight}>Henry2</Text>
                             <Text style={styles.secondaryText}>Gamma: Stalker</Text>
                         </View>
@@ -123,40 +97,106 @@ const mainPage = () => (
                         <Text style={styles.primaryText}>XxJoeSwag727xX</Text>
                         <Text style={styles.secondaryText}>XxJoeSwag727xX: lethal time?</Text>
                     </View>
+                    <Text style={styles.timeText}>12h</Text>
+                </View>
+                <View style={styles.directMessage}>
+                        <Image style={styles.profileIcon} source={groupIcon}></Image>
+                    <View style={styles.profileInfo}>
+                        <Text style={styles.primaryText}>Japanese Uni</Text>
+                        <Text style={styles.secondaryText}>LaserGreen: 今は大学です</Text>
+                    </View>
                     <Text style={styles.timeText}>1d</Text>
                 </View>
                 <View style={styles.directMessage}>
                         <Image style={styles.profileIcon} source={pfp2}></Image>
                     <View style={styles.profileInfo}>
-                        <Text style={styles.primaryText}>Japanese Uni</Text>
-                        <Text style={styles.secondaryText}>LaserGreen: 今は大学です</Text>
+                        <Text style={styles.primaryText}>Henry2</Text>
+                        <Text style={styles.secondaryText}>You: skill issue :joy_cat::joy_cat:</Text>
                     </View>
-                    <Text style={styles.timeText}>3d</Text>
+                    <Text style={styles.timeText}>2d</Text>
                 </View>
+            </ScrollView>
+        </View>
+        <View style={styles.navigationBar}>
+            <View style={styles.navigationButton}>
+                <Image style={styles.navigationIconHighlight} source={home}></Image>
+                <Text style={styles.navTextHighlight}>Home</Text>
             </View>
-        </ScrollView>
-    <View style={styles.navigationBar}>
-        <View style={{flex:0, flexDirection: "column", justifyContent: "center"}}>
-            <Image style={styles.profileIcon} source={home}></Image>
-            <Text style={styles.navTextHighlight}>Home</Text>
+            <View style={styles.navigationButton}>
+                <Image style={styles.navigationIcon} source={bell}></Image>
+                <Text style={styles.navText}>Notifications</Text>
+            </View>
+            <View style={styles.navigationButton}>
+                <Image style={styles.navigationIcon} source={you}></Image>
+                <Text style={styles.navText}>You</Text>
+            </View>
         </View>
-        <View style={{flex:0, flexDirection: "column"}}>
-            <Image style={{marginLeft: "auto", marginRight:"auto",resizeMode: "cover",borderRadius: 50,height: 45,width: 45, marginBottom: 3}} source={bell}></Image>
-            <Text style={styles.navText}>Notifications</Text>
-        </View>
-        <View style={{flex:0, flexDirection: "column", justifyContent: "center"}}>
-            <Image style={styles.profileIcon} source={you}></Image>
-            <Text style={styles.navText}>You</Text>
-        </View>
-      </View>
-    </View>
+    </SafeAreaView>
   );
 const styles = StyleSheet.create({
     background: {
         flex: 1,
-        width: "auto",
-        height: "auto",
-        backgroundColor: "#1e2124"
+        backgroundColor: "#1e2124",
+    },
+    mainBar: {
+        flex: 0,
+        flexDirection:"row", 
+        marginBottom:15
+    },
+    mainBarIcon: {
+        resizeMode: "cover",
+        borderRadius: 50,
+        height: 30,
+        width: 30, 
+        marginHorizontal: 5
+    },
+    addFriendsButton: {
+        flex:0, 
+        backgroundColor:"#40444b", 
+        borderRadius: 30, 
+        justifyContent:"center", 
+        alignItems:"center", 
+        flexGrow:1, 
+        flexDirection: "row", 
+        marginHorizontal: 5
+    },
+    addFriendsText: {
+        marginLeft:5,
+        fontSize: 13, 
+        fontWeight: "bold",
+        color: "#ffffff"
+    },
+    addFriendsIcon: {
+        resizeMode: "cover",
+        borderRadius: 10,
+        height: 20,
+        width: 20, 
+        tintColor: "#ffff"
+    },
+    activityStatusContainer: {
+        flex:0, 
+        backgroundColor:"rgba(48, 52, 58, 1)0", 
+        flexDirection:"row", 
+        borderRadius:15, 
+        padding: 10, 
+        marginRight:10
+    },
+    activityStatusImage: {
+        resizeMode: "cover",
+        borderRadius: 50,
+        height: 70,
+        width:70 
+    },
+    activityStatusProfile: {
+        flex:0, 
+        flexDirection:"column", 
+        marginLeft: 10
+    },
+    profileIconSmall:{
+        resizeMode: "cover",
+        borderRadius: 50,
+        height: 35,
+        width: 35,
     },
     sideBar: {
         flex:1,
@@ -167,41 +207,46 @@ const styles = StyleSheet.create({
         height: "auto",
         width: 80,
         backgroundColor: "#1e2124",
-        gap:10,
         padding: 5,
-        marginTop: 50
-        },
-    serverIcon: {
+    },
+    directMessageIcon: {
         resizeMode: "cover",
-        borderRadius: 50,
-        height: 55,
-        width: 55,
-        marginVertical: 3
-        },
-    profileIcon: {
+        borderRadius:  10,
+        height: 45,
+        width: 45,
+        marginBottom: 20,
+        marginTop: 3
+    },
+    serverIcon: {
         resizeMode: "cover",
         borderRadius: 50,
         height: 45,
         width: 45,
+        marginVertical: 5
+    },
+    profileIcon: {
+        resizeMode: "cover",
+        borderRadius: 50,
+        height: 40,
+        width: 40,
         marginVertical: 3
-        },
+    },
     mainArea: {
-        flex:1,
-        width: "auto",
-        height: "auto",
+        flex:0,
         marginLeft: 80,
         padding:10,
-        paddingBottom: 1000,
         borderTopLeftRadius: 20,
         backgroundColor: "#282b30",
-        alignContent: "space-evenly"
-        },
+        alignContent: "space-evenly",
+        alignSelf: "center"
+    },
     directMessage: {
         flex:0,
         flexDirection: "row",
         width: "auto",
         alignContent: "center",
-        padding: 10,
+        alignItems: "center",
+        padding: 5,
         borderRadius: 10,
         marginVertical: 1
     },
@@ -210,8 +255,9 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         width: "auto",
         alignContent: "center",
+        alignItems: "center",
         backgroundColor: "rgba(48, 52, 58, 1)0",
-        padding: 10,
+        padding: 5,
         borderRadius: 10,
         marginVertical: 1
     },
@@ -223,14 +269,42 @@ const styles = StyleSheet.create({
     navigationBar: {
         flex: 0,
         flexDirection: "row",
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
         justifyContent: "space-between",
-        alignContent:"center",
         padding: 15,
         paddingHorizontal: 50,
+        paddingBottom: 50,
         width: "auto",
         height: 100,
         backgroundColor: "#424549"
-      },
+    },
+    navigationButton: {
+        flex:0, 
+        flexDirection: "column", 
+        justifyContent: "center"
+    },
+    navigationIconHighlight:{
+        marginLeft: "auto", 
+        marginRight:"auto",
+        resizeMode: "stretch",
+        borderRadius: 50,
+        height: 25,
+        width: 25, 
+        marginBottom: 3, 
+        tintColor: "#ffff"
+    },
+    navigationIcon:{
+        marginLeft: "auto",
+         marginRight:"auto",
+         resizeMode: "stretch",
+         borderRadius: 50,
+         height: 25,
+         width: 25, 
+         marginBottom: 3
+    },
     header: {
         fontSize: 20,
         padding: 5,
@@ -239,33 +313,34 @@ const styles = StyleSheet.create({
         color: "#FFFFFF"
     },
     primaryText: { 
-        fontSize: 20,
+        fontSize: 15,
         fontWeight: "bold",
         color: "#ffffff92"
     },
     primaryTextHighlight: { 
-        fontSize: 20,
+        fontSize: 15,
         fontWeight: "bold",
         color: "#ffffff"
     },
     secondaryText: {
-        fontSize: 15, 
+        fontSize: 10, 
         color: "#ffffff92"
     },
-    timeText: { fontSize: 15,
+    timeText: { 
+        fontSize: 9,
         color: "#ffffff92",
         alignSelf:"flex-end",
         paddingBottom: 25,
         marginLeft: "auto",
     },
     navTextHighlight: { 
-        fontSize: 15,
+        fontSize: 9,
         fontWeight: "bold",
         color: "#ffffff",
         textAlign: "center"
     },
     navText: { 
-        fontSize: 15,
+        fontSize: 9,
         fontWeight: "bold",
         color: "#ffffff92",
         textAlign: "center"
