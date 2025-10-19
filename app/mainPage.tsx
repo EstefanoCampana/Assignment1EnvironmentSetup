@@ -1,5 +1,7 @@
+import React from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import AlertDisplay from "./alertPage";
 
 const asset = require('../assets/images/server-icon.png');
 const friendIcon = require('../assets/images/friendicon.png');
@@ -22,6 +24,15 @@ const server10 = require('../assets/images/server10.png');
 const gameIcon = require('../assets/images/game-icon.png');
 const gameIcon2 = require('../assets/images/game-icon2.jpg');
 const groupIcon = require('../assets/images/group-icon.png');
+
+const p2 = require('../assets/images/server12.png');
+const p3 = require('../assets/images/server16.jpg');
+const p4 = require('../assets/images/server17.jpg');
+const p5 = require('../assets/images/server20.jpg');
+const p6 = require('../assets/images/server13.png');
+const p7 = require('../assets/images/inboxicon.png');
+const p8 = require('../assets/images/searchicon.png');
+
 const mainPage = () => (
     <SafeAreaView style={styles.background}>
         <View style={styles.sideBar}>
@@ -53,12 +64,13 @@ const mainPage = () => (
             </Image>
             <Image style={styles.serverIcon} source={asset}>
             </Image>
+
         </View>
         <View style={styles.mainArea}>
             <Text style={styles.header}>Messages</Text>
                 <View style={styles.mainBar}>
-                    <Image style={styles.mainBarIcon} source={asset}></Image>
-                    <Image style={styles.mainBarIcon} source={asset}></Image>
+                    <Image style={styles.mainBarIcon} source={p8}></Image>
+                    <Image style={styles.mainBarIcon} source={p7}></Image>
                     <View style={styles.addFriendsButton}>
                         <Image style={styles.addFriendsIcon} source={friendIcon}></Image>
                         <Text style={styles.addFriendsText}>Add Friends</Text>
@@ -115,7 +127,57 @@ const mainPage = () => (
                     </View>
                     <Text style={styles.timeText}>2d</Text>
                 </View>
+
+                <View style={styles.directMessage}>
+                        <Image style={styles.profileIcon} source={p4}></Image>
+                    <View style={styles.profileInfo}>
+                        <Text style={styles.primaryText}>Trident</Text>
+                        <Text style={styles.secondaryText}>You: Yo whens the mobile assignment due:</Text>
+                    </View>
+                    <Text style={styles.timeText}>2d</Text>
+                </View>
+
+                <View style={styles.directMessage}>
+                        <Image style={styles.profileIcon} source={p5}></Image>
+                    <View style={styles.profileInfo}>
+                        <Text style={styles.primaryText}>Flatline</Text>
+                        <Text style={styles.secondaryText}>You: CS?:</Text>
+                    </View>
+                    <Text style={styles.timeText}>4d</Text>
+                </View>
+
+                <View style={styles.directMessage}>
+                        <Image style={styles.profileIcon} source={p3}></Image>
+                    <View style={styles.profileInfo}>
+                        <Text style={styles.primaryText}>porky</Text>
+                        <Text style={styles.secondaryText}>You: yooooooooo:</Text>
+                    </View>
+                    <Text style={styles.timeText}>5d</Text>
+                </View>
+
+                <View style={styles.directMessage}>
+                        <Image style={styles.profileIcon} source={p6}></Image>
+                    <View style={styles.profileInfo}>
+                        <Text style={styles.primaryText}>yungSnack</Text>
+                        <Text style={styles.secondaryText}>You: hey:</Text>
+                    </View>
+                    <Text style={styles.timeText}>7d</Text>
+                </View>
+
+                <View style={styles.directMessage}>
+                        <Image style={styles.profileIcon} source={p2}></Image>
+                    <View style={styles.profileInfo}>
+                        <Text style={styles.primaryText}>Spenny6</Text>
+                        <Text style={styles.secondaryText}>You: tryna run cod:</Text>
+                    </View>
+                    <Text style={styles.timeText}>9d</Text>
+                </View>
+                <View>
+                <AlertDisplay/>
+                </View> 
             </ScrollView>
+
+            
         </View>
         <View style={styles.navigationBar}>
             <View style={styles.navigationButton}>
@@ -130,6 +192,7 @@ const mainPage = () => (
                 <Image style={styles.navigationIcon} source={you}></Image>
                 <Text style={styles.navText}>You</Text>
             </View>
+
         </View>
     </SafeAreaView>
   );
@@ -345,7 +408,6 @@ const styles = StyleSheet.create({
         color: "#ffffff92",
         textAlign: "center"
         },
-    
 });
 
- export default mainPage;
+export default mainPage;
