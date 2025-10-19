@@ -123,7 +123,7 @@ const mainPage = () => (
                         <Image style={styles.profileIcon} source={pfp2}></Image>
                     <View style={styles.profileInfo}>
                         <Text style={styles.primaryText}>Henry2</Text>
-                        <Text style={styles.secondaryText}>You: skill issue :joy_cat::joy_cat:</Text>
+                        <Text style={styles.secondaryText}>You: skill issue :joy_cat::joy_cat</Text>
                     </View>
                     <Text style={styles.timeText}>2d</Text>
                 </View>
@@ -132,7 +132,7 @@ const mainPage = () => (
                         <Image style={styles.profileIcon} source={p4}></Image>
                     <View style={styles.profileInfo}>
                         <Text style={styles.primaryText}>Trident</Text>
-                        <Text style={styles.secondaryText}>You: Yo whens the mobile assignment due:</Text>
+                        <Text style={styles.secondaryText}>You: Yo whens the mobile assignment due</Text>
                     </View>
                     <Text style={styles.timeText}>2d</Text>
                 </View>
@@ -141,7 +141,7 @@ const mainPage = () => (
                         <Image style={styles.profileIcon} source={p5}></Image>
                     <View style={styles.profileInfo}>
                         <Text style={styles.primaryText}>Flatline</Text>
-                        <Text style={styles.secondaryText}>You: CS?:</Text>
+                        <Text style={styles.secondaryText}>You: CS?</Text>
                     </View>
                     <Text style={styles.timeText}>4d</Text>
                 </View>
@@ -150,7 +150,7 @@ const mainPage = () => (
                         <Image style={styles.profileIcon} source={p3}></Image>
                     <View style={styles.profileInfo}>
                         <Text style={styles.primaryText}>porky</Text>
-                        <Text style={styles.secondaryText}>You: yooooooooo:</Text>
+                        <Text style={styles.secondaryText}>You: yooooooooo</Text>
                     </View>
                     <Text style={styles.timeText}>5d</Text>
                 </View>
@@ -159,7 +159,7 @@ const mainPage = () => (
                         <Image style={styles.profileIcon} source={p6}></Image>
                     <View style={styles.profileInfo}>
                         <Text style={styles.primaryText}>yungSnack</Text>
-                        <Text style={styles.secondaryText}>You: hey:</Text>
+                        <Text style={styles.secondaryText}>You: hey</Text>
                     </View>
                     <Text style={styles.timeText}>7d</Text>
                 </View>
@@ -168,7 +168,7 @@ const mainPage = () => (
                         <Image style={styles.profileIcon} source={p2}></Image>
                     <View style={styles.profileInfo}>
                         <Text style={styles.primaryText}>Spenny6</Text>
-                        <Text style={styles.secondaryText}>You: tryna run cod:</Text>
+                        <Text style={styles.secondaryText}>You: tryna run cod</Text>
                     </View>
                     <Text style={styles.timeText}>9d</Text>
                 </View>
