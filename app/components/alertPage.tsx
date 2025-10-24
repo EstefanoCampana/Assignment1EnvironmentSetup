@@ -14,7 +14,7 @@ const AlertDisplay = () => {
             style={styles.iconButton}
             onPress={() => setVisible(!visible)}>
                 <Image 
-                    source={require('../assets/images/5431-chat.png')} 
+                    source={require('../../assets/images/5431-chat.png')} 
                     style={styles.iconSize}
                 />
             </TouchableOpacity>
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
 
     container: {
         flex: 1,
+
     },
 
     alertContainer: {
@@ -45,13 +46,13 @@ const styles = StyleSheet.create({
 
     iconButton: {
         position: 'absolute',
-        marginTop: -80,
+        bottom: 40,
         right: 0,
     },
     
     iconSize: {
-        width: 50,
-        height: 50,
+        width: 55,
+        height: 55,
     },
 });
 

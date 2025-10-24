@@ -1,41 +1,39 @@
 import React from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import AlertDisplay from "./alertPage";
+import AlertDisplay from "../components/alertPage";
 
-const asset = require('../assets/images/server-icon.png');
-const friendIcon = require('../assets/images/friendicon.png');
-const pfp1 = require('../assets/images/lasergreen.png');
-const pfp2 = require('../assets/images/henry2.png');
-const pfp3 = require('../assets/images/joe swag.png');
-const home = require('../assets/images/homeicon.png');
-const bell = require('../assets/images/bellicon.png');
-const you = require('../assets/images/mypfp.png');
-const server1 = require('../assets/images/server1.png');
-const server2 = require('../assets/images/server2.png');
-const server3 = require('../assets/images/server3.png');
-const server4 = require('../assets/images/server4.png');
-const server5 = require('../assets/images/server5.png');
-const server6 = require('../assets/images/server6.png');
-const server7 = require('../assets/images/server7.png');
-const server8 = require('../assets/images/server8.png');
-const server9 = require('../assets/images/server9.png');
-const server10 = require('../assets/images/server10.png');
-const gameIcon = require('../assets/images/game-icon.png');
-const gameIcon2 = require('../assets/images/game-icon2.jpg');
-const groupIcon = require('../assets/images/group-icon.png');
+const asset = require('../../assets/images/server-icon.png');
+const friendIcon = require('../../assets/images/friendicon.png');
+const pfp1 = require('../../assets/images/lasergreen.png');
+const pfp2 = require('../../assets/images/henry2.png');
+const pfp3 = require('../../assets/images/joe swag.png');
+const server1 = require('../../assets/images/server1.png');
+const server2 = require('../../assets/images/server2.png');
+const server3 = require('../../assets/images/server3.png');
+const server4 = require('../../assets/images/server4.png');
+const server5 = require('../../assets/images/server5.png');
+const server6 = require('../../assets/images/server6.png');
+const server7 = require('../../assets/images/server7.png');
+const server8 = require('../../assets/images/server8.png');
+const server9 = require('../../assets/images/server9.png');
+const server10 = require('../../assets/images/server10.png');
+const gameIcon = require('../../assets/images/game-icon.png');
+const gameIcon2 = require('../../assets/images/game-icon2.jpg');
+const groupIcon = require('../../assets/images/group-icon.png');
 
-const p2 = require('../assets/images/server12.png');
-const p3 = require('../assets/images/server16.jpg');
-const p4 = require('../assets/images/server17.jpg');
-const p5 = require('../assets/images/server20.jpg');
-const p6 = require('../assets/images/server13.png');
-const p7 = require('../assets/images/inboxicon.png');
-const p8 = require('../assets/images/searchicon.png');
+const p2 = require('../../assets/images/server12.png');
+const p3 = require('../../assets/images/server16.jpg');
+const p4 = require('../../assets/images/server17.jpg');
+const p5 = require('../../assets/images/server20.jpg');
+const p6 = require('../../assets/images/server13.png');
+const p7 = require('../../assets/images/inboxicon.png');
+const p8 = require('../../assets/images/searchicon.png');
 
 const mainPage = () => (
     <SafeAreaView style={styles.background}>
         <View style={styles.sideBar}>
+            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 40 }}>
             <Image style={styles.directMessageIcon} source={server1}>
             </Image>
             <Image style={styles.serverIcon} source={server2}>
@@ -64,7 +62,7 @@ const mainPage = () => (
             </Image>
             <Image style={styles.serverIcon} source={asset}>
             </Image>
-
+            </ScrollView>
         </View>
         <View style={styles.mainArea}>
             <Text style={styles.header}>Messages</Text>
@@ -76,7 +74,7 @@ const mainPage = () => (
                         <Text style={styles.addFriendsText}>Add Friends</Text>
                     </View>
                 </View>
-            <ScrollView showsVerticalScrollIndicator={false}>
+            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 40 }}>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{flex:0, marginBottom:10}}>
                     <View style={styles.activityStatusContainer}>
                         <Image style={styles.activityStatusImage}source={gameIcon}></Image>
@@ -123,7 +121,7 @@ const mainPage = () => (
                         <Image style={styles.profileIcon} source={pfp2}></Image>
                     <View style={styles.profileInfo}>
                         <Text style={styles.primaryText}>Henry2</Text>
-                        <Text style={styles.secondaryText}>You: skill issue :joy_cat::joy_cat</Text>
+                        <Text style={styles.secondaryText}>You: skill issue :joy_cat::joy_cat:</Text>
                     </View>
                     <Text style={styles.timeText}>2d</Text>
                 </View>
@@ -172,34 +170,15 @@ const mainPage = () => (
                     </View>
                     <Text style={styles.timeText}>9d</Text>
                 </View>
-                <View>
-                <AlertDisplay/>
-                </View> 
             </ScrollView>
-
-            
-        </View>
-        <View style={styles.navigationBar}>
-            <View style={styles.navigationButton}>
-                <Image style={styles.navigationIconHighlight} source={home}></Image>
-                <Text style={styles.navTextHighlight}>Home</Text>
-            </View>
-            <View style={styles.navigationButton}>
-                <Image style={styles.navigationIcon} source={bell}></Image>
-                <Text style={styles.navText}>Notifications</Text>
-            </View>
-            <View style={styles.navigationButton}>
-                <Image style={styles.navigationIcon} source={you}></Image>
-                <Text style={styles.navText}>You</Text>
-            </View>
-
+            <AlertDisplay/>
         </View>
     </SafeAreaView>
   );
 const styles = StyleSheet.create({
     background: {
-        flex: 1,
-        backgroundColor: "#1e2124",
+        flexDirection: "row",
+        backgroundColor: "#1e2124"
     },
     mainBar: {
         flex: 0,
@@ -268,7 +247,6 @@ const styles = StyleSheet.create({
         alignContent: "space-evenly",
         alignSelf: "flex-start",
         height: "auto",
-        width: 80,
         backgroundColor: "#1e2124",
         padding: 5,
     },
@@ -295,13 +273,10 @@ const styles = StyleSheet.create({
         marginVertical: 3
     },
     mainArea: {
-        flex:0,
-        marginLeft: 80,
+        flex:4,
         padding:10,
         borderTopLeftRadius: 20,
         backgroundColor: "#282b30",
-        alignContent: "space-evenly",
-        alignSelf: "center"
     },
     directMessage: {
         flex:0,
@@ -328,45 +303,6 @@ const styles = StyleSheet.create({
         flex:0,
         flexDirection: "column",
         paddingLeft: 10
-    },
-    navigationBar: {
-        flex: 0,
-        flexDirection: "row",
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        justifyContent: "space-between",
-        padding: 15,
-        paddingHorizontal: 50,
-        paddingBottom: 50,
-        width: "auto",
-        height: 100,
-        backgroundColor: "#424549"
-    },
-    navigationButton: {
-        flex:0, 
-        flexDirection: "column", 
-        justifyContent: "center"
-    },
-    navigationIconHighlight:{
-        marginLeft: "auto", 
-        marginRight:"auto",
-        resizeMode: "stretch",
-        borderRadius: 50,
-        height: 25,
-        width: 25, 
-        marginBottom: 3, 
-        tintColor: "#ffff"
-    },
-    navigationIcon:{
-        marginLeft: "auto",
-         marginRight:"auto",
-         resizeMode: "stretch",
-         borderRadius: 50,
-         height: 25,
-         width: 25, 
-         marginBottom: 3
     },
     header: {
         fontSize: 20,
@@ -396,18 +332,6 @@ const styles = StyleSheet.create({
         paddingBottom: 25,
         marginLeft: "auto",
     },
-    navTextHighlight: { 
-        fontSize: 9,
-        fontWeight: "bold",
-        color: "#ffffff",
-        textAlign: "center"
-    },
-    navText: { 
-        fontSize: 9,
-        fontWeight: "bold",
-        color: "#ffffff92",
-        textAlign: "center"
-        },
 });
 
 export default mainPage;
