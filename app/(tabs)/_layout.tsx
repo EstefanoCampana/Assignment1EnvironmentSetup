@@ -42,7 +42,11 @@ export default function TabsLayout() {
       title:"You",
       tabBarIcon: ({size}) => (
         <Image source={asset} style={{height:size, width:size, borderRadius:50}}/>
-      )
+      ),
+      tabBarStyle:{
+        backgroundColor: "#edb3dbff",
+        borderColor: "#edb3dbff",
+      }
     }}/>
     </Tabs>
 }
