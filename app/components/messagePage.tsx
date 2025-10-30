@@ -1,9 +1,7 @@
-import { useRouter } from "expo-router";
+import { Link } from "expo-router";
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const newMessage = () => {
-
-    const router = useRouter();
 
     const backArrow = require('../../assets/images/download.jpg');
     const addAFriend = require('../../assets/images/addafriend.png');
@@ -28,9 +26,11 @@ const newMessage = () => {
                 <Text style={styles.text}>To:  Search your friends</Text>
                 </View>
 
-                <TouchableOpacity onPress={() => router.back}>
-                    <Image source={backArrow} style={styles.imageArrow}/>
+                <Link href='/' asChild style={styles.imageArrow}>
+                <TouchableOpacity>
+                    <Image source={backArrow} style={{height: 30,width: 30, resizeMode:"cover", borderRadius: 60}}/>
                 </TouchableOpacity>
+                </Link>
             </View>
 
         <ScrollView>
@@ -64,27 +64,22 @@ const newMessage = () => {
                         <Image source={icon} style={styles.littleIcon}/>
                         <Text style={{color: "#ffffff"}}>908</Text>
                     </View>
-                    </View>
+                </View>
                     
-                    </View>
-                    <Text style={styles.textSmall}>xxjoeswag727xx</Text>
-
-                    
-
-                <View>
+            </View>
+            <Text style={styles.textSmall}>xxjoeswag727xx</Text>
+            <View>
                 <View style={[styles.profileInfo, styles.border]}>
                     <Image source={profile2} style={styles.image}/>
                     <Text style={styles.text}>Henry2</Text>
                         <View style={styles.little}>
-                        <Image source={icon} style={styles.littleIcon}/>
-                        <Text style={{color: "#ffffff"}}>908</Text>
-                    </View>
-                    </View>
-                    <Text style={styles.textSmall}>henryinohio</Text>
-
+                            <Image source={icon} style={styles.littleIcon}/>
+                            <Text style={{color: "#ffffff"}}>908</Text>
+                        </View>
                 </View>
-
-                <View>
+                <Text style={styles.textSmall}>henryinohio</Text>
+            </View>
+            <View>
                 <View style={[styles.profileInfo, styles.border]}>
                     <Image source={profile3} style={styles.image}/>
                     <Text style={styles.text}>LaserGreen</Text>
@@ -94,26 +89,21 @@ const newMessage = () => {
                         <Text style={{color: "#ffffff"}}>908</Text>
                     </View>
 
-                    </View>
-                    <Text style={styles.textSmall}>lasergreen</Text>
-
                 </View>
-
-                <View>
+                <Text style={styles.textSmall}>lasergreen</Text>
+            </View>
+            <View>
                 <View style={styles.profileInfo}>
-                <Image source={profile4} style={styles.image}/>
-                <Text style={styles.text}>GreenTea</Text>
-
-                                    <View style={styles.little}>
+                    <Image source={profile4} style={styles.image}/>
+                    <Text style={styles.text}>GreenTea</Text>
+                    <View style={styles.little}>
                         <Image source={icon} style={styles.littleIcon}/>
                         <Text style={{color: "#ffffff"}}>908</Text>
                     </View>
-
                 </View>
                 <Text style={styles.textSmall}>greentea</Text>
-
-                </View>
             </View>
+        </View>
 
             <View>
                 <Text style={styles.description}>!</Text>
@@ -209,14 +199,9 @@ const styles = StyleSheet.create({
         margin: 20,
     },
     imageArrow: {
-
         position: 'absolute',
         bottom: 75,
-        borderRadius: 60,
-        height: 30,
-        width: 30,
         marginVertical: 3,
-        color: "#808080"
     },
     description: {
         left: 10,
