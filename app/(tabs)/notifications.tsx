@@ -19,8 +19,12 @@ const NotificationsPage = () =>{
                 <Text style={styles.Discord}>Notifications</Text>
             </View>
             <View style={styles.Recent}>
-                <Image style={styles.notify} source={pfp2}></Image>
-                <View style={{flexDirection: "column"}}>
+                <View style={styles.avatar}>
+                    <Image style={styles.notify} source={pfp2}></Image>
+                    <View style={styles.statusDot}></View>
+                </View>
+                    
+                <View style={{flex: 1}}>
                     <Text style={styles.Request}>Henry2 sent you a friend request</Text>
                     <View style={styles.button}>
                         <View style={styles.bluebutton}>
@@ -123,12 +127,10 @@ const styles = StyleSheet.create({
     },
     Recent: {
         flexDirection: "row",
-        justifyContent: "flex-start", 
         alignItems: "center",
-        gap: 20,
+        gap: 15,
+        marginBottom: 25,
         width: "100%",
-        marginTop: 60,
-        marginBottom: 20,
 
     },
     RecentActivity: {
@@ -143,44 +145,47 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        backgroundColor: "#6445ffff",
-        borderRadius: 20,
-        width: 90,
-        height: 40,
-        paddingVertical: 5,
-        paddingHorizontal: 20,
-        alignItems: "center",
         flexDirection: "row",
-        justifyContent: "flex-start",
-        gap: 60,
+        gap: 10,
+        marginTop: 8,
     },
     bluebutton: {
         backgroundColor: "#6445ffff",
         borderRadius: 20,
-        width: 90,
-        height: 40,
         paddingVertical: 6,
-        paddingHorizontal: 10,
+        paddingHorizontal: 18,
         alignItems: "center",
-        flexDirection: "row",
-        justifyContent: "flex-start",
-        gap: 60,
+        justifyContent: "center",
     },
     greybutton: {
         backgroundColor: "#5f5f5fff", 
         borderRadius: 20,
         paddingVertical: 6,
-        paddingHorizontal: 10,
+        paddingHorizontal: 18,
         alignItems: "center",
         justifyContent: "center",
-        color: "#ffffffff",
-        height: 40,
-        width: 90,
+        
     },
     buttontext: {
         color: "#ffffffff",
         fontWeight: "bold",
         fontSize: 15,
+    },
+    avatar: {
+        position: "relative",
+        width: 60,
+        height: 60,
+    },
+    statusDot: {
+        position: "absolute",
+        bottom: 2,
+        right: 2,
+        width: 15,
+        height: 15,
+    borderRadius: 6,
+    backgroundColor: "#3BA55D", 
+    borderWidth: 2,
+    borderColor: "#1e2124",
     }
     
         
