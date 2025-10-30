@@ -36,6 +36,7 @@ const newMessage = () => {
         <ScrollView>
 
             <View style={styles.sectionBackground}>
+                
                 <View style={[styles.directMessageHighlight, styles.border]}>
                     <Image source={addAGroup} style={[styles.image, styles.groupImage]}/>
                     <Text style={styles.text}>New Group</Text>
@@ -54,8 +55,7 @@ const newMessage = () => {
             </View>
 
             <View style={styles.sectionBackground}>
-
-                <View>
+                <View style={styles.pushDown}>
                 <View style={[styles.profileInfo, styles.border]}>
                     <Image source={profile1} style={styles.image}/>
                     <Text style={styles.text}>XxJoeSwag727xX</Text>
@@ -64,7 +64,6 @@ const newMessage = () => {
                         <Image source={icon} style={styles.littleIcon}/>
                         <Text style={{color: "#ffffff"}}>908</Text>
                     </View>
-                </View>
                     
             </View>
             <Text style={styles.textSmall}>xxjoeswag727xx</Text>
@@ -104,29 +103,32 @@ const newMessage = () => {
                 <Text style={styles.textSmall}>greentea</Text>
             </View>
         </View>
-
+            </View>
             <View>
                 <Text style={styles.description}>!</Text>
             </View>
 
             <View style={styles.sectionBackground}>
+                <View style={styles.pushDown}>
                 <View style={styles.profileInfo}>
                 <Image source={profile5} style={styles.image}/>
                 <Text style={styles.text}>!CDE!</Text>
                 </View>
                 <Text style={styles.textSmall}>cde0406</Text>
+                </View>
             </View>
 
             <View>
                 <Text style={styles.description}>$</Text>
             </View>
-
             <View style={styles.sectionBackground}>
+                <View style={styles.pushDown}>
                 <View style={styles.profileInfo}>
                 <Image source={profile6} style={styles.image}/>
                 <Text style={styles.text}>$hans_#</Text>
                 </View>
                 <Text style={styles.textSmall}>hans_1803</Text>
+                </View>
             </View>
             
             </ScrollView>
@@ -243,5 +245,9 @@ const styles = StyleSheet.create({
         height: 20,
         padding : 2,
         borderRadius: 5,
+    },
+
+    pushDown: {
+        top: 10,
     },
 });
