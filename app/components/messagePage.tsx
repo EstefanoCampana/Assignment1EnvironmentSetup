@@ -8,9 +8,9 @@ const newMessage = () => {
     const addAGroup = require('../../assets/images/2522093.png');
     const GreaterThan = require('../../assets/images/greaterThan.png');
     const icon = require('../../assets/images/iconicon.jpg');
-    const profile1 = require('../../assets/images/profile1.jpg');
-    const profile2 = require('../../assets/images/profile2.jpg');
-    const profile3 = require('../../assets/images/profile3.jpg');
+    const profile1 = require('../../assets/images/joe swag.png');
+    const profile2 = require('../../assets/images/henry2.png');
+    const profile3 = require('../../assets/images/lasergreen.png');  
     const profile4 = require('../../assets/images/profile4.jpg');
     const profile5 = require('../../assets/images/profile5.jpg');
     const profile6 = require('../../assets/images/profile6.jpg');
