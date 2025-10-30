@@ -1,88 +1,105 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const pfp1 = require('../../assets/images/lasergreen.png');
 const pfp2 = require('../../assets/images/henry2.png');
-const pfp3 = require('../../assets/images/joe swag.png');
-const p2 = require('../../assets/images/server12.png');
-const p3 = require('../../assets/images/server16.jpg');
-const p4 = require('../../assets/images/server17.jpg');
-const p5 = require('../../assets/images/server20.jpg');
-const p6 = require('../../assets/images/server13.png');
-const server1 = require('../../assets/images/server1.png');
-const server2 = require('../../assets/images/server2.png');
-const server3 = require('../../assets/images/server3.png');
+const pfp3 = require('../../assets/images/profile4.jpg');
 
 const NotificationsPage = () =>{
     return(
-        <View style={styles.container}>
-            <View style={styles.topRow}>
-                <Text style={styles.Discord}>Notifications</Text>
-            </View>
-            <View style={styles.Recent}>
-                <View style={styles.avatar}>
-                    <Image style={styles.notify} source={pfp2}></Image>
-                    <View style={styles.statusDot}></View>
+        <SafeAreaView style={styles.container} edges={['top','left','right']}>
+                <View style={styles.topRow}>
+                    <Text style={styles.Discord}>Notifications</Text>
                 </View>
-                    
-                <View style={{flex: 1}}>
-                    <Text style={styles.Request}>Henry2 sent you a friend request</Text>
-                    <View style={styles.button}>
-                        <View style={styles.bluebutton}>
-                            <Text style={styles.buttontext}>Accept</Text>
-                        </View>
-                        <View style={styles.greybutton}>
-                            <Text style={styles.buttontext}>Ignore</Text>
+                <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={styles.Recent}>
+                    <View style={styles.avatar}>
+                        <Image style={styles.notify} source={pfp2}></Image>
+                        <View style={styles.statusDot}></View>
+                    </View>
+                        
+                    <View style={{flex: 1}}>
+                        <Text style={styles.Request}>Henry2 sent you a friend request</Text>
+                        <View style={styles.button}>
+                            <View style={styles.bluebutton}>
+                                <Text style={styles.buttontext}>Accept</Text>
+                            </View>
+                            <View style={styles.greybutton}>
+                                <Text style={styles.buttontext}>Ignore</Text>
+                            </View>
                         </View>
                     </View>
+                    
                 </View>
-                   
-            </View>
-            <View style={styles.Recent}>
-                <Text style={styles.RecentActivity}>Recent Activity</Text>
-            </View>
-            <View style={styles.bottomRow}>
-                <Image style = {styles.notify} source={pfp2}></Image>
-                <Text style={styles.text}>blah blah</Text>
-            </View>
-            <View style={styles.bottomRow}>
-                <Image style = {styles.notify} source={pfp3}></Image>
-                <Text style={styles.text}>blah blah</Text>
-            </View>
-            <View style={styles.bottomRow}>
-                <Image style = {styles.notify} source={p2}></Image>
-                <Text style={styles.text}>blah blah</Text>
-            </View>
-            <View style={styles.bottomRow}>
-                <Image style = {styles.notify} source={p3}></Image>
-                <Text style={styles.text}>blah blah blah</Text>
-            </View>
-            <View style={styles.bottomRow}>
-                <Image style = {styles.notify} source={p4}></Image>
-                <Text style={styles.text}>blah blah blah</Text>
-            </View>
-            <View style={styles.bottomRow}>
-                <Image style = {styles.notify} source={p5}></Image>
-                <Text style={styles.text}>blah blah blah</Text>
-            </View>
-            <View style={styles.bottomRow}>
-                <Image style = {styles.notify} source={p6}></Image>
-                <Text style={styles.text}>blah blah</Text>
-            </View>
-            <View style={styles.bottomRow}>
-                <Image style = {styles.notify} source={server1}></Image>
-                <Text style={styles.text}>blah blah blah</Text>
-            </View>
-            <View style={styles.bottomRow}>
-                <Image style = {styles.notify} source={server2}></Image>
-                <Text style={styles.text}>blah blah blah</Text>
-            </View>
-            <View style={styles.bottomRow}>
-                <Image style = {styles.notify} source={server3}></Image>
-                <Text style={styles.text}>blah blah blah</Text>
-            </View>
-            
-            
-        </View>
+                <View style={styles.Recent}>
+                    <Text style={styles.RecentActivity}>Recent Activity</Text>
+                </View>
+                <View style={styles.bottomRow}>
+                    <Image style = {styles.notify} source={pfp3}></Image>
+                    <View style={{flex: 0, flexDirection: "column", width: 230}}>
+                        <Text style={styles.text}>Greentea replied to you in <Text style={{fontWeight: "bold"}}>Joe mama but greglet - osu deez</Text></Text>
+                        <Text style={styles.secondaryText}>🦌</Text>
+                    </View>
+                    <Text style={styles.timeText}>2m</Text>
+                </View> 
+                <View style={styles.bottomRow}>
+                    <Image style = {styles.notify} source={pfp1}></Image>
+                    <View style={{flex: 0, flexDirection: "column", width: 230}}>
+                        <Text style={styles.text}>LaserGreen replied to you in <Text style={{fontWeight: "bold"}}>Japanese Uni:</Text></Text>
+                        <Text style={styles.secondaryText}>kinda yeah</Text>
+                    </View>
+                    <Text style={styles.timeText}>6m</Text>
+                </View>
+                <View style={styles.bottomRow}>
+                    <Image style = {styles.notify} source={pfp1}></Image>
+                    <View style={{flex: 0, flexDirection: "column", width: 230}}>
+                        <Text style={styles.text}>LaserGreen replied to you in <Text style={{fontWeight: "bold"}}>Japanese Uni:</Text></Text>
+                        <Text style={styles.secondaryText}>it does for me bc i switched to pc</Text>
+                    </View>
+                    <Text style={styles.timeText}>7m</Text>
+                </View>
+                <View style={styles.bottomRow}>
+                    <Image style = {styles.notify} source={pfp1}></Image>
+                    <View style={{flex: 0, flexDirection: "column", width: 230}}>
+                        <Text style={styles.text}>LaserGreen replied to you in <Text style={{fontWeight: "bold"}}>Japanese Uni:</Text></Text>
+                        <Text style={styles.secondaryText}>it is</Text>
+                    </View>
+                    <Text style={styles.timeText}>8m</Text>
+                </View>
+                <View style={styles.bottomRow}>
+                    <Image style = {styles.notify} source={pfp1}></Image>
+                    <View style={{flex: 0, flexDirection: "column", width: 230}}>
+                        <Text style={styles.text}>LaserGreen replied to you in <Text style={{fontWeight: "bold"}}>Japanese Uni:</Text></Text>
+                        <Text style={styles.secondaryText}>yeah</Text>
+                    </View>
+                    <Text style={styles.timeText}>8m</Text>
+                </View>
+                <View style={styles.bottomRow}>
+                    <Image style = {styles.notify} source={pfp1}></Image>
+                    <View style={{flex: 0, flexDirection: "column", width: 230}}>
+                        <Text style={styles.text}>LaserGreen replied to you in <Text style={{fontWeight: "bold"}}>Japanese Uni:</Text></Text>
+                        <Text style={styles.secondaryText}>ong</Text>
+                    </View>
+                    <Text style={styles.timeText}>9m</Text>
+                </View>
+                <View style={styles.bottomRow}>
+                    <Image style = {styles.notify} source={pfp1}></Image>
+                    <View style={{flex: 0, flexDirection: "column", width: 230}}>
+                        <Text style={styles.text}>LaserGreen replied to you in <Text style={{fontWeight: "bold"}}>Japanese Uni:</Text></Text>
+                        <Text style={styles.secondaryText}>looks nice</Text>
+                    </View>
+                    <Text style={styles.timeText}>9m</Text>
+                </View>                
+                <View style={styles.bottomRow}>
+                    <Image style = {styles.notify} source={pfp1}></Image>
+                    <View style={{flex: 0, flexDirection: "column", width: 230}}>
+                        <Text style={styles.text}>LaserGreen replied to you in <Text style={{fontWeight: "bold"}}>Japanese Uni:</Text></Text>
+                        <Text style={styles.secondaryText}>send</Text>
+                    </View>
+                    <Text style={styles.timeText}>10m</Text>
+                </View>
+                </ScrollView>
+        </SafeAreaView>
     );
 };
 
@@ -90,10 +107,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#1e2124",
-        justifyContent: "flex-start",
-        alignItems: "flex-start",
-        paddingTop: 40,
-        paddingLeft: 20,
+        padding: 20,
+        paddingBottom: 0
     },
     Discord: {
         color: "#ffffff",
@@ -104,14 +119,29 @@ const styles = StyleSheet.create({
     notify: {
         resizeMode: "cover",
         borderRadius: 60,
-        height: 60,
-        width: 60,
+        height: 50,
+        width: 50,
     },
     text: {
-        fontSize: 20,
+        fontSize: 12,
         color: "#ffffff92",
+        textOverflow: "ellipsis"
+    },
+    secondaryText:{
+        fontSize: 12,
+        color: "#ffffff92",
+        marginTop:2,
+        marginLeft: 10
+
+    },
+    timeText: {
+        marginLeft: "auto", 
+        color: "#ffffff92",
+        alignSelf: "flex-start",
+        fontSize: 10
     },
     bottomRow:{
+        flex: 0,
         flexDirection: "row",
         alignItems: "center",
         gap: 20,
@@ -178,8 +208,8 @@ const styles = StyleSheet.create({
     },
     statusDot: {
         position: "absolute",
-        bottom: 2,
-        right: 2,
+        bottom: 7,
+        right: 7,
         width: 15,
         height: 15,
     borderRadius: 6,
