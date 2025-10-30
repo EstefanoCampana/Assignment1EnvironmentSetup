@@ -23,7 +23,7 @@ const newMessage = () => {
                 </View>
                 
                 <View style={styles.searchBox}>
-                <Text style={styles.text}>To:  Search your friends</Text>
+                <Text style={{color: "#808080"}}>To:  Search your friends</Text>
                 </View>
 
                 <Link href='/' asChild style={styles.imageArrow}>
@@ -172,12 +172,11 @@ const styles = StyleSheet.create({
     },
     text: {
         color: "#ffffff",
-        fontSize: 18,
+        fontSize: 17,
         left: 20,
     },
     textSmall: {
-        
-        color: "#ffffff",
+        color: "#808080",
         fontSize: 12,
         bottom: 20,
         left: 70,
@@ -191,7 +190,6 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 15,
         margin: 20,
-        color: "#808080",
     },
 
     sectionBackground: {
